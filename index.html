@@ -1,271 +1,245 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Focaraque | Música Animada</title>
+
+<link rel="icon" href="favicon.png">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-<style>
+<link rel="stylesheet" href="styles.css">
 
-*{box-sizing:border-box}
-body{
-margin:0;
-font-family:'Poppins',sans-serif;
-background:#0b0b12;
-color:white;
-overflow-x:hidden;
-}
-
-/* HERO */
-.hero{
-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:40px;
-background:radial-gradient(circle at center,#1b1b2f,#090910);
-}
-
-.hero h1{
-font-size:64px;
-margin:0;
-letter-spacing:2px;
-}
-
-.hero p{
-opacity:.8;
-font-size:18px;
-margin-top:10px;
-}
-
-.hero img{
-width:260px;
-margin-top:40px;
-animation:float 6s ease-in-out infinite;
-}
-
-@keyframes float{
-0%{transform:translateY(0px)}
-50%{transform:translateY(-20px)}
-100%{transform:translateY(0px)}
-}
-
-.cta{
-margin-top:30px;
-display:flex;
-gap:15px;
-}
-
-button{
-padding:12px 22px;
-border-radius:10px;
-border:none;
-font-size:16px;
-cursor:pointer;
-background:#ff4d6d;
-color:white;
-}
-
-button:hover{opacity:.85}
-
-/* SECTION */
-section{
-padding:90px 10%;
-}
-
-h2{
-font-size:36px;
-margin-bottom:40px;
-text-align:center;
-}
-
-/* VISUAL GALLERY */
-.gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:25px;
-}
-
-.card{
-background:#141420;
-border-radius:16px;
-overflow:hidden;
-transition:transform .4s, box-shadow .4s;
-}
-
-.card:hover{
-transform:translateY(-10px);
-box-shadow:0 15px 40px rgba(0,0,0,.5);
-}
-
-.card img{
-width:100%;
-display:block;
-}
-
-.card p{
-padding:15px;
-opacity:.8;
-font-size:14px;
-}
-
-/* MUSIC PLAYER */
-.music-player{
-max-width:600px;
-margin:auto;
-text-align:center;
-}
-
-audio{
-width:100%;
-margin-top:20px;
-}
-
-/* VIDEO */
-.video{
-max-width:900px;
-margin:auto;
-}
-
-.video iframe{
-width:100%;
-height:500px;
-border-radius:16px;
-border:none;
-}
-
-/* ABOUT */
-.about{
-max-width:700px;
-margin:auto;
-text-align:center;
-line-height:1.7;
-opacity:.9;
-}
-
-/* FOOTER */
-footer{
-padding:50px;
-text-align:center;
-background:#07070c;
-opacity:.8;
-}
-
-/* PARALLAX BACKGROUND DECOR */
-.bg-notes{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-pointer-events:none;
-z-index:-1;
-background-image:url('https://upload.wikimedia.org/wikipedia/commons/3/3b/Musical_notes.svg');
-background-size:120px;
-opacity:.03;
-animation:scrollbg 60s linear infinite;
-}
-
-@keyframes scrollbg{
-0%{background-position:0 0}
-100%{background-position:0 1000px}
-}
-
-</style>
 </head>
+
+
 
 <body>
 
 <div class="bg-notes"></div>
 
+
+
+<!-- HEADER -->
+
+<header>
+
+<div class="logo">
+<span>Focaraque</span>
+</div>
+
+<nav>
+
+<a href="#musica">Música</a>
+<a href="#videos">Videos</a>
+<a href="#visuales">Visuales</a>
+<a href="#about">Sobre</a>
+
+</nav>
+
+</header>
+
+
+
 <!-- HERO -->
+
 <section class="hero">
 
+<div class="hero-overlay"></div>
+
+<div class="hero-content">
+
 <h1>Focaraque</h1>
+
+<div class="hero-line"></div>
+
 <p>Música • Animación • Universos Sonoros</p>
 
-<img src="visual1.jpg" alt="Focaraque" />
+<img src="visual1.jpg" alt="Focaraque">
 
 <div class="cta">
-<button onclick="document.getElementById('musica').scrollIntoView({behavior:'smooth'})">Escuchar</button>
-<button onclick="document.getElementById('videos').scrollIntoView({behavior:'smooth'})">Ver Videos</button>
+
+<button onclick="document.getElementById('musica').scrollIntoView({behavior:'smooth'})">
+Escuchar
+</button>
+
+<button onclick="document.getElementById('videos').scrollIntoView({behavior:'smooth'})">
+Ver Videos
+</button>
+
+</div>
+
 </div>
 
 </section>
 
-<!-- MUSIC -->
-<section id="musica">
+
+
+<!-- MUSICA -->
+
+<section class="section" id="musica">
+
+<div class="container">
 
 <h2>Música</h2>
+
+<div class="line"></div>
 
 <div class="music-player">
 
 <p>Escucha una de las composiciones de Focaraque.</p>
 
 <audio controls>
+
 <source src="music.mp3" type="audio/mpeg">
+
 </audio>
 
 </div>
 
+</div>
+
 </section>
 
+
+
 <!-- VIDEO -->
-<section id="videos">
+
+<section class="section" id="videos">
+
+<div class="container">
 
 <h2>Video</h2>
 
+<div class="line"></div>
+
 <div class="video">
 
-<iframe src="https://www.youtube.com/embed/VIDEO_ID"></iframe>
+<iframe
+src="https://www.youtube.com/embed/VIDEO_ID"
+allowfullscreen>
+</iframe>
+
+</div>
 
 </div>
 
 </section>
 
-<!-- VISUALS -->
-<section>
+
+
+<!-- VISUALES -->
+
+<section class="section" id="visuales">
+
+<div class="container">
 
 <h2>Visuales Animados</h2>
+
+<div class="line"></div>
 
 <div class="gallery">
 
 <div class="card">
-<img src="visual1.jpg">
+<img src="visual1.jpg" alt="">
 <p>Focaraque tocando en un mar de notas musicales.</p>
 </div>
 
 <div class="card">
-<img src="visual2.jpg">
+<img src="visual2.jpg" alt="">
 <p>La ciudad nocturna se ilumina con cada nota.</p>
 </div>
 
 <div class="card">
-<img src="visual3.jpg">
+<img src="visual3.jpg" alt="">
 <p>El árbol donde crecen instrumentos musicales.</p>
 </div>
 
 <div class="card">
-<img src="visual4.jpg">
+<img src="visual4.jpg" alt="">
 <p>Un café donde la música vive en el aire.</p>
 </div>
 
 <div class="card">
-<img src="visual5.jpg">
+<img src="visual5.jpg" alt="">
 <p>Viaje cósmico dentro de un vinilo.</p>
 </div>
 
 </div>
 
+</div>
+
 </section>
 
-<!-- ABOUT -->
-<section>
+
+
+<!-- SOBRE FOCARAQUE -->
+
+<section class="section about-section" id="about">
+
+<div class="container">
 
 <h2>Sobre Focaraque</h2>
 
-<div class="about">
+<div class="line"></div>
+
+<div class="about-grid">
+
+<img src="visual1.jpg" alt="Focaraque">
+
+<div class="about-text">
+
+<p>
+
+Focaraque es un personaje musical animado que explora la relación
+entre sonido, imagen y narrativa.
+
+</p>
+
+<p>
+
+Cada composición se convierte en una pequeña historia
+donde la música no solo se escucha,
+sino que también se vive a través de visuales
+y universos animados.
+
+</p>
+
+<p>
+
+El proyecto mezcla composición original,
+arte visual y exploración sonora
+para construir mundos donde cada nota
+abre una nueva puerta creativa.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>© Focaraque</p>
+
+</footer>
+
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
